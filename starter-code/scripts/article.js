@@ -18,9 +18,9 @@ function Article (options) {
 Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   $newArticle.attr('data-category', this.category);
-  $newArticle.find('author').text(this.author);
-  $newArticle.find('author').attr('href', this.authorUrl);
-  $newArticle.find('title').text(this.title);
+  $newArticle.find('#author').text(this.author);
+  $newArticle.find('#author').attr('href', this.authorUrl);
+  $newArticle.find('#title').text(this.title);
   $newArticle.find('section').html(this.body);
   /* TODO: We also need to fill in:
   1. author name
